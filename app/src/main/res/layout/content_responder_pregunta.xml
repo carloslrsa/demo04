@@ -1,13 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:scrollbarAlwaysDrawVerticalTrack="true"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".ResponderPreguntaActivity"
+    tools:showIn="@layout/activity_responder_pregunta">
 
     <android.support.v7.widget.CardView
+        android:id="@+id/preguntaCardView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
+        android:visibility="gone"
         app:cardBackgroundColor="#c7cef2">
 
         <LinearLayout
@@ -31,7 +39,7 @@
                     app:srcCompat="@drawable/profile" />
 
                 <TextView
-                    android:id="@+id/nombreTextView"
+                    android:id="@+id/autorResponderPreguntaTextView"
                     android:layout_width="285dp"
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
@@ -44,7 +52,7 @@
             </LinearLayout>
 
             <TextView
-                android:id="@+id/contenidoTextView"
+                android:id="@+id/contenidoResponderPreguntaTextView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
@@ -53,21 +61,21 @@
                 android:text="Ayúdeme con este ejercicio de geometría por favor. Me piden calcular en el triángulo BC. " />
 
             <ImageView
-                android:id="@+id/fotoPreguntaImageView"
+                android:id="@+id/fotoResponderPreguntaImageView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
+                android:visibility="visible"
                 app:srcCompat="@drawable/profile" />
 
-            <Button
-                android:id="@+id/verPreguntaButton"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:background="@color/colorPrimaryDark"
-                android:text="Responder" />
         </LinearLayout>
     </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/preguntasRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </android.support.v7.widget.RecyclerView>
+
 </LinearLayout>

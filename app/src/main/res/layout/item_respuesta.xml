@@ -7,8 +7,8 @@
     <android.support.v7.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        app:cardBackgroundColor="#c7cef2">
+        android:layout_margin="20dp"
+        app:cardBackgroundColor="#dcdde3">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -23,7 +23,6 @@
                 android:orientation="horizontal">
 
                 <ImageView
-                    android:id="@+id/fotoImageView"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_margin="10dp"
@@ -31,7 +30,7 @@
                     app:srcCompat="@drawable/profile" />
 
                 <TextView
-                    android:id="@+id/nombreTextView"
+                    android:id="@+id/nombreRespuestaItemTextView"
                     android:layout_width="285dp"
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
@@ -39,12 +38,12 @@
                     android:gravity="left|center_horizontal"
                     android:text="Juan Perez"
                     android:textColor="@android:color/black"
-                    android:textSize="24sp" />
+                    android:textSize="18sp" />
 
             </LinearLayout>
 
             <TextView
-                android:id="@+id/contenidoTextView"
+                android:id="@+id/contenidoRespuestaItemTextView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
@@ -53,21 +52,12 @@
                 android:text="Ayúdeme con este ejercicio de geometría por favor. Me piden calcular en el triángulo BC. " />
 
             <ImageView
-                android:id="@+id/fotoPreguntaImageView"
+                android:id="@+id/fotoRespuestaItemImageView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 app:srcCompat="@drawable/profile" />
 
-            <Button
-                android:id="@+id/verPreguntaButton"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:background="@color/colorPrimaryDark"
-                android:text="Responder" />
         </LinearLayout>
     </android.support.v7.widget.CardView>
 </LinearLayout>

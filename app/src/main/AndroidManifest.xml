@@ -3,6 +3,7 @@
     package="com.demo04.arquisoft.demo04">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -11,7 +12,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".VerPreguntasActivity">
+        <activity android:name=".VerPreguntasActivity" />
+        <activity
+            android:name=".PublicarPreguntaActivity"
+            android:configChanges="orientation"
+            android:label="@string/title_activity_subir_pregunta"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -19,9 +27,13 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".SubirPreguntaActivity"
-            android:label="@string/title_activity_subir_pregunta"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:name=".ResponderPreguntaActivity"
+            android:label="@string/title_activity_responder_pregunta"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+
+
+        <activity android:name=".PublicarRespuestaActivity"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>
